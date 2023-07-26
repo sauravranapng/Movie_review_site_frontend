@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ 
+  <title>Movie site</title>
+  <link href="movie.css" rel="stylesheet" type="text/css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+  <div class="topnav">
+    <div class="container">
+          <input type="checkbox" id="toggle">
+          <label  for="toggle">&#9776</label>
+         
+        <nav>
+           <ul>
+            <li><a href="index.html?type=normal">home</a></li>
+            <li><a href="index.html?type=top_rated">Top rated</a></li>
+            
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">Favourite</a></li>
+            <li><a href="#">Your reviews</a></li>
+            <li class="dropdown">
+              <a  href="#">Genre</a>
+              <ul class="dropdown-content">
+                <li><a href="index.html?type=genre_specific&genre_id=28&name=Action">Action</a></li>
+                <li><a href="index.html?type=genre_specific&genre_id=12&name=Adventure">Adventure</a></li>
+                <li><a href="index.html?type=genre_specific&genre_id=16&name=Animation">Animation</a></li>
+                <li><a href="index.html?type=genre_specific&genre_id=35&name=Comedy">Comedy</a></li>
+                <li><a href="index.html?type=genre_specific&genre_id=80&name=Crime">Crime</a></li>
+                <li><a href="index.html?type=genre_specific&genre_id=99&name=Documentory">Documentory</a></li>
+                <li><a href="index.html?type=genre_specific&genre_id=18&name=Drame">Drama</a></li>
+                <li><a href="index.html?type=genre_specific&genre_id=14&name=Fantasy">Fantasy</a></li>
+                <li><a href="index.html?type=genre_specific&genre_id=10751&name=Family">Family</a></li>
+                <li><a href="index.html?type=genre_specific&genre_id=36&name=History">History</a></li>
+                <li><a href="index.html?type=genre_specific&genre_id=27&name=Horror">Horror</a></li>
+                <li><a href="index.html?type=genre_specific&genre_id=10402&name=Music">Music</a></li>
+                <li><a href="index.html?type=genre_specific&genre_id=9648&name=Mystery">Mystery</a></li>
+                <li><a href="index.html?type=genre_specific&genre_id=10749&name=Romance">Romance</a></li>
+                <li><a href="index.html?type=genre_specific&genre_id=878&name=Science Fiction">Science Fiction</a></li>
+                <li><a href="index.html?type=genre_specific&genre_id=53&name=Thriller">Thriller</a></li>
+                <li><a href="index.html?type=genre_specific&genre_id=10752&name=War">War</a></li>
+                <!-- Add more genre options here -->
+              </ul>
+            </li>
+           
+          </ul>
+        
+      </nav>
+    </div>
+     <a class="home" href="index.html?type=normal">Movies Site</a>
+     
+     <div class="search-container">
+       <form role="search" id="form">
+         <input type="search" id="query" name="q" placeholder="search..">
+       </form>
+     </div>
+    
+   </div>
+  <h1>Reviews for:</h1>
+  <h3 id="title">Movie Title</h3>
+<section id="section">
+   
+</section>
+    <script src="movie.js"></script>
+</body>
+
+</html>

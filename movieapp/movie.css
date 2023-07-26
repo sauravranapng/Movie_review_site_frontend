@@ -1,0 +1,256 @@
+/* CSS Reset */
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+body {
+  line-height: 1.5;
+}
+ul,
+ol {
+  list-style: none;
+}
+*{
+  box-sizing: border-box;
+}
+body{background-color: #131720;
+    font-family:sans-serif;
+    color:white}
+
+.topnav{
+  z-index: 1;
+  display:flex;
+justify-content: space-between;
+  overflow: hidden;
+  background-color: #131720;
+  padding:2%;
+}
+.login-symbol {
+  margin-right: 30px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #ddd;
+  width: 40px;
+  height: 40px;
+ align-items: center;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #007bff; 
+  background-color: #bbb8b8;/* You can change the color to match your design */
+}
+.dropdown-content2 {
+ display: none;
+  position: absolute;
+  z-index: 3;
+  margin-top: 90px;
+  padding-top: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  box-shadow:2px 5px 5px #000;
+  overflow:hidden;
+  transition: .5s ease;
+  align-items: center;
+  font-size:  20px;
+}
+.dropdown-content2:hover{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.dropdown-content2 a:hover{
+  background-color: #0c0c0c;
+  color:#fff;
+  border-radius: 5px solid #fff;
+}
+.login-symbol:hover .dropdown-content2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.search-container{
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+
+input[type=checkbox]{
+  display: none;
+}
+.container label{
+  font-size: 3em;
+  height: 100%;
+  width:70px;
+  line-height: 30px;
+  text-align: center;
+  cursor:pointer;
+  transition: .3s ease;
+}
+.container label:hover{
+  color:#000;
+  background:  #737171;
+  
+}
+.container nav{
+  position:absolute;
+  top:60px;
+  height: 300px;
+  bottom:0;
+  width:0;
+ /* background: rgba(0,0, 0, .1);*/
+  box-shadow:2px 5px 5px #000;
+  overflow:hidden;
+  transition: .5s ease;
+}
+.container nav ul li a{
+  display:flex;
+  width: 100%;
+  align-items:center;
+  font-size:1.2em;
+  font-family: arial;
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 10px 30px;
+  height:50px ;
+  transition: .5s ease;
+}
+.container nav ul li a:hover {
+  background-color: #0c0c0c;
+  color:#fff;
+  border-radius: 5px solid #fff;
+  
+}
+.container label:hover ~ nav{
+width:400px;
+}
+.container nav:hover{
+  width:400px;
+}
+
+/* Initially hide the .dropdown-content */
+.dropdown-content {
+  display: none;
+}
+
+/* Show the .dropdown-content when hovering over .dropdown */
+.dropdown:hover .dropdown-content {
+  display: block;
+  margin-left: 200px;
+  background-color: #000;
+}
+.dropdown-content li:hover{
+  background-color: #e6dddd;
+}
+
+/* Add styles for the .nav element */
+
+
+
+.home{
+  
+    color: rgb(255, 222, 8);
+    padding: 10px;
+    border: 1px solid #ddd;
+      height: 3%;
+      position: relative;
+      z-index: 1;
+      float:left;
+      display:block;
+     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      text-align: center;
+      padding: 5px 5px;
+      text-decoration: none;
+      font-size:1.2rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      
+}
+
+
+.title{
+  font-size: 15px;
+  color:white;
+}
+
+form{
+  background-color: #151f30;
+  width:300px;
+  height:43px;
+  border-radius: 11px;
+  display:flex;
+  align-items:center;
+}
+input{
+  font: 15px system-ui;
+  color: black;
+  height: 100%;
+  width:100%;
+  padding: 6px 9px;
+}
+.thumbnail{
+  height:350px;
+  width:300px;
+  border-radius:10px;
+}
+#section{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+ 
+ 
+  /*float: left;*/
+
+  padding: 2% 2%;
+}
+.card p {
+    white-space: normal; /* Allow text to wrap within the paragraph */
+    word-wrap: break-word; /* Break long words to prevent overflow */
+  }
+.card{
+  flex:15%;
+  border-radius:10px;
+  padding:5px 5px;
+  
+  margin: 10px;
+  align-items: center;
+  text-align:center;
+  background-color: #151f30;
+}
+.rating-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border-width: 2px;
+  border-color: #131720;
+  border-style: solid;
+  background-color: rgb(255, 222, 8); /* Set the color for the filled circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 16px;
+}
+#review_link{
+  align-items: center;
+  margin-left: 31.5%;
+}
+.rate{
+  display: flex;
+  
+}
+
+
+i{
+  margin: 2% 2%;
+}
+
+.rev{
+  margin:2% 2%;
+}
+
+

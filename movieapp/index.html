@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie site</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+ 
+ <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">-->
+  </head>
+</head>
+<body>
+  <script>
+
+  </script>
+ <div class="topnav">
+  <div class="container">
+        <input type="checkbox" id="toggle">
+        <label  for="toggle">&#9776</label>
+       
+      <nav>
+         <ul>
+          <li><a href="index.html?type=normal">home</a></li>
+          <li><a href="index.html?type=top_rated">Top rated</a></li>
+          
+          <li><a href="#">Wishlist</a></li>
+          <li><a href="#">Favourite</a></li>
+          <li><a href="#">Your reviews</a></li>
+          <li class="dropdown">
+            <a  href="#">Genre</a>
+            <ul class="dropdown-content">
+              <li><a href="index.html?type=genre_specific&genre_id=28&name=Action">Action</a></li>
+              <li><a href="index.html?type=genre_specific&genre_id=12&name=Adventure">Adventure</a></li>
+              <li><a href="index.html?type=genre_specific&genre_id=16&name=Animation">Animation</a></li>
+              <li><a href="index.html?type=genre_specific&genre_id=35&name=Comedy">Comedy</a></li>
+              <li><a href="index.html?type=genre_specific&genre_id=80&name=Crime">Crime</a></li>
+              <li><a href="index.html?type=genre_specific&genre_id=99&name=Documentory">Documentory</a></li>
+              <li><a href="index.html?type=genre_specific&genre_id=18&name=Drame">Drama</a></li>
+              <li><a href="index.html?type=genre_specific&genre_id=14&name=Fantasy">Fantasy</a></li>
+              <li><a href="index.html?type=genre_specific&genre_id=10751&name=Family">Family</a></li>
+              <li><a href="index.html?type=genre_specific&genre_id=36&name=History">History</a></li>
+              <li><a href="index.html?type=genre_specific&genre_id=27&name=Horror">Horror</a></li>
+              <li><a href="index.html?type=genre_specific&genre_id=10402&name=Music">Music</a></li>
+              <li><a href="index.html?type=genre_specific&genre_id=9648&name=Mystery">Mystery</a></li>
+              <li><a href="index.html?type=genre_specific&genre_id=10749&name=Romance">Romance</a></li>
+              <li><a href="index.html?type=genre_specific&genre_id=878&name=Science Fiction">Science Fiction</a></li>
+              <li><a href="index.html?type=genre_specific&genre_id=53&name=Thriller">Thriller</a></li>
+              <li><a href="index.html?type=genre_specific&genre_id=10752&name=War">War</a></li>
+              <!-- Add more genre options here -->
+            </ul>
+          </li>
+         
+        </ul>
+      
+    </nav>
+  </div>
+   <a class="home" href="index.html?type=normal">Movies Site</a>
+   
+   <div class="search-container">
+     <form role="search" id="form">
+       <input type="search" id="query" name="q" placeholder="search..">
+     </form>
+   </div>
+   <div class="login-symbol">
+    <i class="fas fa-user"></i>
+    <ul class="dropdown-content2">
+      <li><a href="#" onclick="login()" >Login</a></li>
+      <li><a href="#" onclick="logout()">Logout</a></li>
+      <script>
+        function login(){
+          let currentURL = window.location.href;
+          const url=new URL(location.href);
+          const type=url.searchParams.get("type");
+          if(!type){
+            currentURL=`${currentURL}?type=normal`;
+          }
+            const loginURL = `https://website-authentication-server.onrender.com/login?redirect=${encodeURIComponent(currentURL)}`;
+             window.location.href = loginURL;
+        }
+        
+        
+        // Function to handle the logout process
+        function logout() {
+         // Clear the user information from localStorage
+          localStorage.removeItem("userEmail");
+          localStorage.removeItem("userName");
+          let currentURL = window.location.href;
+          const url=new URL(location.href);
+          const type=url.searchParams.get("type");
+          if(!type){
+            currentURL=`${currentURL}?type=normal`;
+          }
+            const logoutURL = `https://website-authentication-server.onrender.com/logout?redirect=${encodeURIComponent(currentURL)}`;
+             window.location.href = logoutURL;
+        }
+        
+      </script>
+    </ul>
+   </div>
+  
+ </div>
+  
+<section id="section">
+   <!-- <div class="row">
+    <div class="column">
+      <div class="card">
+        <center><img src="image.jpg" class="thumbnail" id="image"></center>
+       <h3 id="title">Movie Title</h3>
+      </div>
+    </div>
+  </div>-->
+</section>
+    <script src="script.js"></script>
+</body>
+
+</html>

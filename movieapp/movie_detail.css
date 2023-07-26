@@ -1,0 +1,246 @@
+body {
+    overflow-x: hidden;
+   background-color: #131720;
+   
+    color:white;
+    
+    
+  }
+*{
+    box-sizing: border-box;
+  }
+.topnav{
+    z-index: 1;
+    overflow: hidden;
+    padding:2%;
+    display: flex;
+    justify-content: center;
+  }
+a{color:rgb(88, 218, 49)}
+.topnav a{
+  color: rgb(255, 222, 8);
+  
+    border: 2px solid rgb(0, 0, 0);
+    height: 3%;
+    position: relative;
+    z-index: 1;
+    float:left;
+    display:block;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    padding: 5px 5px;
+    text-decoration: none;
+    font-size:1.2rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+  }
+  #box {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center top;
+    align-items: center;
+    /*height: 100vh;*//* Adjust the height as needed */
+  }
+  .extra-space {
+    margin-right: 5px;
+    margin-left:5px; /* Adjust the margin value as needed */
+  }
+  #Big_title, #p {
+   
+    text-align: center ;
+    font-weight:bolder;
+  }
+  #trailor{
+    position: relative;
+    z-index: 2;
+    width: 100vw;
+    /*height: 100vh;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  iframe{
+    width: 70vw;
+    height: 39vw;
+  }
+
+.video-slider {
+  width: 70vw;
+  height:39vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+ }
+  .video-slide {
+    width: 70vw;
+    height: 39vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (max-width: 800px) {
+
+    iframe{
+      width: 95vw;
+      height: 53vw;
+    }
+  
+  .video-slider {
+    width: 95vw;
+    height:53vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+   }
+    .video-slide {
+      width: 95vw;
+      height: 53vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .rating-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-width: 2px;
+    border-color: #131720;
+    border-style: solid;
+    background-color: rgb(255, 222, 8); /* Set the color for the filled circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 16px;
+  }
+.rate{
+  display: flex;
+  justify-content: center;
+}
+#recommendations{
+    position: relative;
+    z-index: 2;
+    width:100vw;
+   
+  }
+.slider-container{
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    overflow: hidden;
+  }
+  .image-slider {
+    display: flex;
+    overflow-x: scroll;
+    transition: transform 0.5s ease-in-out;
+  }/* Apply smooth scrolling when the cursor is on the slider */
+
+
+/* Your other CSS styles */
+p{
+  margin-top: 1px;
+  margin-bottom: 1px;
+  }
+  .card {
+    border-radius: 10px;
+    padding: 5px 5px;
+    margin: 10px;
+    align-items: center;
+    text-align: center;
+    background-color: #151f30;
+  }
+  
+  .thumbnail{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+ justify-content: center;
+    height:300px;
+    width: 250px;
+    border-radius:10px;
+  }
+  .image_container{
+    display: flex;
+    justify-content: center;
+  }
+ 
+  .title{
+    font-size: 15px;
+    color:white;
+  }
+  #also_like{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  font-size: large;
+  font-weight: bold;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+  .small_title1{
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+  }
+  .small_title2{
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+    font-size: 17px;
+    color: aqua;
+  }
+  .cast_mem {
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  
+  @media (max-width: 430px) {
+    .cast_mem {
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
+  .crew_mem {
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  
+  @media (max-width: 430px) {
+    .crew_mem {
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
+  #cast_image{
+    border: solid #131720;
+    height:170px;
+    width:140px;
+   
+  }
+  .image_card{
+    margin: 5px 5px 5px 5px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ text-align: center;
+ align-items: center;
+  }
