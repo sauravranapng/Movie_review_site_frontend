@@ -19,13 +19,11 @@ console.log("User's email:", storedEmail);
 console.log("User's name:", storedName);
 
 let APILINK;
-if(!type){
+if(!type||type==="normal"){
   
   APILINK ='https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc';
 }
-else if(type==="normal"){
-   APILINK ='https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc';
-}
+
 else if(type==="top_rated"){
    APILINK='https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=vote_average.desc&without_genres=99,10755&vote_count.gte=200';
 }
