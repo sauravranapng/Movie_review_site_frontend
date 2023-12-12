@@ -93,6 +93,7 @@ function saveReview(reviewInputId,userInputId,id=""){
         const loginURL = `https://website-authentication-server.onrender.com/login?redirect=${encodeURIComponent(currentURL)}`;
          window.location.href = loginURL;
   }
+  else{
   const review=document.getElementById(reviewInputId).value;
   const user=storedName;
 if(id){
@@ -122,6 +123,7 @@ if(id){
       location.reload();//it is going to reload the url
   });
   }
+}
 }
 function deleteReview(id,user){
   if(user===storedName){
