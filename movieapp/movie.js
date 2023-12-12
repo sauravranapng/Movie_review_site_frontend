@@ -11,9 +11,11 @@ if(userEmail&&userName){
   localStorage.setItem("userEmail", userEmail);
 localStorage.setItem("userName", userName);
 }
-// Access the stored data from localStorage
 const storedEmail = localStorage.getItem("userEmail");
 const storedName = localStorage.getItem("userName");
+
+// Access the stored data from localStorage
+
 
 // Use the data as needed
 console.log("User's email:", storedEmail);
@@ -86,7 +88,7 @@ function editReview(id, review, user) {
 }
 
 function saveReview(reviewInputId,userInputId,id=""){
-  if(!storedEmail){
+  if(storedEmail===null){
       const currentURL = window.location.href;
         const loginURL = `https://website-authentication-server.onrender.com/login?redirect=${encodeURIComponent(currentURL)}`;
          window.location.href = loginURL;
