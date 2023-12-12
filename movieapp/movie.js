@@ -29,18 +29,13 @@ title.innerText=movieTitle;
 const div_new = document.createElement('div');
  div_new.setAttribute('class', 'card');
        div_new.innerHTML = `
-         
-         
-           
+  
            New Review
              <p><strong>Review:</strong>
                <input type="text" id="new_review" value="">
              </p>
              
               <p><a href="#" onclick="saveReview('new_review','new_user')"> <i  class="fa fa-save"></i></a></p>
-           
-         
-         
   `
 main.appendChild(div_new)
 returnReviews(APILINK);
@@ -53,15 +48,13 @@ function returnReviews(url) {
          div_card.setAttribute('class', 'card');
           div_card.setAttribute('id', `${review._id}`);
        div_card.innerHTML = `
-  
-    
         <p><strong>Review: </strong></p><p>${review.review}</p>
         <p><strong>User: </strong>${review.user}</p>
         <p>
           <a class="rev" href="#" onclick="editReview('${review._id}','${review.review}','${review.user}')">
             <i class="fas fa-edit"></i> Edit
           </a>
-          <a class="rev" href="#" onclick="deleteReview('${review._id}')">
+          <a class="rev" href="#" onclick="deleteReview('${review._id}','${review.user}')">
             <i class="fas fa-trash-alt"></i> Delete
           </a>
         </p>
@@ -73,7 +66,8 @@ function returnReviews(url) {
     });
 }
 function editReview(id, review, user) {
-  const element = document.getElementById(id);
+  if(user===storedName){
+    const element = document.getElementById(id);
   const reviewInputId = "review" + id;
   const userInputId = "user" + id;
 
@@ -88,6 +82,7 @@ function editReview(id, review, user) {
     <i class="fa fa-save"></i></a>
     </p>
   `;
+  }
 }
 
 function saveReview(reviewInputId,userInputId,id=""){
@@ -116,7 +111,6 @@ if(id){
     fetch(APILINK+"new",{
     method:'POST',
     headers:{
-      
      'Accept':'application/json,text/plain,*/*',
       'Content-Type':'application/json'
     },
@@ -126,15 +120,16 @@ if(id){
       location.reload();//it is going to reload the url
   });
   }
-  
 }
-function deleteReview(id){
-  fetch(APILINK+id,{
-    method:'DELETE'
-  }).then(res=>res.json()).then(res=>{
-      console.log(res)
-      location.reload();//it is going to reload the url
-  });
+function deleteReview(id,user){
+  if(user===storedName){
+    fetch(APILINK+id,{
+      method:'DELETE'
+    }).then(res=>res.json()).then(res=>{
+        console.log(res)
+        location.reload();//it is going to reload the url
+    });
+  }
   }
 
 

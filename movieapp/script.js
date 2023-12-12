@@ -15,8 +15,8 @@ const storedEmail = localStorage.getItem("userEmail");
 const storedName = localStorage.getItem("userName");
 
 // Use the data as needed
-console.log("User's email:", storedEmail);
-console.log("User's name:", storedName);
+//console.log("User's email:", storedEmail);
+//console.log("User's name:", storedName);
 
 let APILINK;
 if(!type||type==="normal"){
@@ -51,12 +51,15 @@ returnMovies(APILINK);
 
 function returnMovies(url) {
   fetch(url, options).then(response => response.json()).then(function(data) {
-      console.log(data.results);
+    //The fetch function of javaScript is used to initiate a network request to a specified URL
+    //The fetch function returns a Promise, which represents the future result of the network request.
+
+   // response.json() is a method that reads the response body and returns a
+   // Promise that resolves to the JSON representation of the response data.
+    //If the response is not valid JSON, it will throw an error.
+//This .then block essentially processes the response, converting it to JSON format.
+    console.log(data.results);
       data.results.forEach(element => {
-        //const div_row = document.createElement('div');
-        //div_row.setAttribute('class', 'row');
-       // const div_column = document.createElement('div');
-        //div_column.setAttribute('class', 'column');
         const div_card = document.createElement('div');
         div_card.setAttribute('class', 'card');
         const image = document.createElement('img');
@@ -93,35 +96,25 @@ function returnMovies(url) {
       });
     
     
-    const dropdown = document.querySelector('.dropdown');
+const dropdown = document.querySelector('.dropdown');
 const nav = document.querySelector('.container nav');
 const label=document.querySelector('.container label');
 // Add event listener for mouseover and mouseout
-
 // Get the elements
-
-
 // Add event listener for mouseover and mouseout
 dropdown.addEventListener('mouseover', () => {
   // Increase the height of .nav when hovering over .dropdown
   nav.style.height = '1150px';
 });
-
 dropdown.addEventListener('mouseout', () => {
   // Reset the height of .nav when the mouse leaves .dropdown
   nav.style.height = '300px'; // Change this to the initial height value
 });
-
-
 });
 }
 function goTo(movieId,movietitle) {
   window.location.href = `movie.html?id=${movieId}&title=${movietitle}`;
 }
-
-
-
-
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   main.innerHTML = '';

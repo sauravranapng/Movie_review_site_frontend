@@ -103,9 +103,6 @@ function returnDetail(url) {
         d++;
       }
 
-
-
-      //For Trailors
       const trailor=document.getElementById('trailor');
       const video_data = data.videos.results;
       const slider=document.createElement('div');
